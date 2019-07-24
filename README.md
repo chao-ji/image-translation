@@ -3,8 +3,10 @@
 <p align='center'>
   <img src='g3doc/images/horse_zebra/horse.gif'>
   <img src='g3doc/images/horse_zebra/horse2zebra.gif'>
+  <img src='g3doc/images/horse_zebra/zebra.gif', width=372>
+  <img src='g3doc/images/horse_zebra/zebra2horse.gif', width=372>
   <br>
-  Translating an animated gif file of a running horse into a running zebra using CycleGAN.
+  Translating an animated gif file of a running horse(zebra) into a running zebra(horse) using CycleGAN.
 </p>
 
 
@@ -14,7 +16,10 @@
   CycleGAN architecture: Figure 3 of Zhu et al. 2017(https://arxiv.org/abs/1703.10593)
 </p>
 
-This is a tensorflow implementation of CycleGAN for performing unpaired image-to-image translation (e.g. object transfiguration, style transfer). As shown in the diagram, it involves two pairs of Discriminator ($D_X$ and $D_Y$) and Generator ($G$ and $F$), where $D_X$ tries to distinguish real images in domain X from fake images in domain X, which are generated from source images in domain Y using $F$ (i.e. $F: Y->X$); likewise, $D_Y$ tries to distinguish real images in domain Y from fake images in domain Y, which are generated from source images in domain X using $G$ (i.e. $G: X->Y$). The goal is that 
+
+
+
+This repo documents my tensorflow implementation of CycleGAN for performing unpaired image-to-image translation (e.g. object transfiguration, style transfer). As shown in the diagram, it involves two pairs of Discriminator ($D_X$ and $D_Y$) and Generator ($G$ and $F$), where $D_X$ tries to distinguish real images in domain X from fake images in domain X, which are generated from source images in domain Y using $F$ (i.e. $F: Y->X$); likewise, $D_Y$ tries to distinguish real images in domain Y from fake images in domain Y, which are generated from source images in domain X using $G$ (i.e. $G: X->Y$). The goal is that 
 * The probability distribution of real and fake images in domain X (or Y) are indistinguishable from each other.
 * Translating from domain X (Y) to domain Y (X), then back to domain X (Y) should be close to the identity mapping.
 
